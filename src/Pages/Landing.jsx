@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Loader from "../Components/Loader/Loader";
 import styles from "../styles/app.module.scss";
 import { IllustrationOne } from "../Assets/Index";
 
 const Landing = () => {
     const [isPending, setIsPending] = useState(true);
-    // let navigate = useNavigate();
-    // const routeChange = () => {
-    //   navigate("/Login");
-    // };
+    let navigate = useNavigate();
+    const routeChange = () => {
+      navigate("/Onboard");
+    };
     useEffect(() => {
       setTimeout(() => {
         setIsPending(false);
@@ -29,7 +30,7 @@ const Landing = () => {
                   <div className={styles["Primary-Text"]}>Find your Comfort Food here</div>
                   <div className={styles["Secondry-Text"]}>Here You Can find a chef or dish for every taste and color. Enjoy!</div>
                   <div className={styles["Button-Container"]}>
-                    <button className={styles["Next"]}>Next</button>
+                    <button className={styles["Next"]} onClick={routeChange}>Next</button>
                   </div>
                 </div>
              </div>
