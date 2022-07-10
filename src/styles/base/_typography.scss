@@ -1,0 +1,23 @@
+/* stylelint-disable-next-line import-notation */
+// @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600&display=swap");
+
+@mixin heading {
+  font-size: to-rem(90px);
+}
+
+@mixin text {
+  font-size: to-rem(20px);
+}
+
+@mixin center-div {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+@mixin column{
+  flex-direction:column;
+}
+@mixin green-bg {
+  background: linear-gradient(98.81deg, #12AA57 -0.82%, #15BE77 101.53%);
+}
